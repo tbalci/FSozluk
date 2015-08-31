@@ -24,22 +24,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FSZLK.Mapp", "http://localh
 		SlnRelativePath = "FSZLK.Mapp\"
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dokumanlar", "Dokumanlar", "{089100F6-601D-4F2D-BC6B-2E8E65733DCB}"
-	ProjectSection(SolutionItems) = preProject
-		E:\Drp\Dropbox\FSZLK\SozlukData.csv = E:\Drp\Dropbox\FSZLK\SozlukData.csv
-		E:\Drp\Dropbox\FSZLK\SozlukData.xlsx = E:\Drp\Dropbox\FSZLK\SozlukData.xlsx
-		E:\Drp\Dropbox\FSZLK\SÃ–ZLÃœK App..xls = E:\Drp\Dropbox\FSZLK\SÃ–ZLÃœK App..xls
-		E:\Drp\Dropbox\FSZLK\SÖZLÜK App..xls = E:\Drp\Dropbox\FSZLK\SÖZLÜK App..xls
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "psd", "psd", "{CF0EEC29-2171-4066-B16C-B3416B0E9E26}"
-	ProjectSection(SolutionItems) = preProject
-		E:\Drp\Dropbox\FSZLK\psd\1024_768.psd = E:\Drp\Dropbox\FSZLK\psd\1024_768.psd
-		E:\Drp\Dropbox\FSZLK\psd\320_480.psd = E:\Drp\Dropbox\FSZLK\psd\320_480.psd
-		E:\Drp\Dropbox\FSZLK\psd\640_960.psd = E:\Drp\Dropbox\FSZLK\psd\640_960.psd
-		E:\Drp\Dropbox\FSZLK\psd\768_1024.psd = E:\Drp\Dropbox\FSZLK\psd\768_1024.psd
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,8 +34,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{CF0EEC29-2171-4066-B16C-B3416B0E9E26} = {089100F6-601D-4F2D-BC6B-2E8E65733DCB}
 	EndGlobalSection
 EndGlobal
