@@ -26,59 +26,53 @@
     <script src="lib/js/underscore-db.js"></script>
     <script src="lib/js/VeriTabani.js"></script>
     <script src="lib/js/lodash.js"></script>
-    <script src="lib/js/VeriTabani.js"></script>
+    <script src="lib/js/VeriTabani.min.js"></script>
     <script src="lib/js/App.js"></script>
     <style>
         .aln {
-            position:relative;
-        }
-        .controlgroup-textinput{
-            padding-top:.22em;
-            padding-bottom:.22em;
-            font-size: 16px;
-            width:auto;
-        }
-        .controlgroup 
-        {
-            width:auto;
+            position: relative;
         }
 
-       </style>
+        .controlgroup-textinput {
+            padding-top: .22em;
+            padding-bottom: .22em;
+            font-size: 16px;
+            width: auto;
+        }
+
+        .controlgroup {
+            width: auto;
+        }
+    </style>
 </head>
 <body>
     <div data-role="page" id="Anasayfa" data-transition="slide">
         <div data-role="header" data-position="fixed">
             <div class="ui-grid-a left">
-                <div class="ui-block-c"><img height="65px" width="64px" data-bind="attr: {src:Uygulama.Logo}" /></div>
-                <div class="ui-block-b"><h3 data-bind="text:Uygulama.Ad"></h3></div>
+                    <div class="ui-block-c"><img height="65px" width="64px" data-bind="attr: {src:Uygulama.Logo}" /></div>
+                    <div class="ui-block-b"><h3 data-bind="text:Uygulama.Ad"></h3></div>
             </div>
-            <div data-role="popup" id="popupMenu" data-theme="d">
-                <ul id="dilsecim" data-role="listview" data-inset="false" data-theme="d">
-                    <li data-dil="1" data-dilicon="lib/Icon/tr.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/tr.png" />Türkçe</a></li>
-                    <li data-dil="2" data-dilicon="lib/Icon/en.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/en.png" />İngilizce</a></li>
-                    <li data-dil="3" data-dilicon="lib/Icon/fr.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/fr.png" />Fransızca</a></li>
-                </ul>
+               <div data-role="popup" id="popupMenu" data-theme="d">
+                    <ul id="dilsecim" data-role="listview" data-inset="false" data-theme="d">
+                        <li data-dil="1" data-dilicon="lib/Icon/tr.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/tr.png" />Türkçe</a></li>
+                        <li data-dil="2" data-dilicon="lib/Icon/en.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/en.png" />İngilizce</a></li>
+                        <li data-dil="3" data-dilicon="lib/Icon/fr.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/fr.png" />Fransızca</a></li>
+                    </ul>
+                </div>
+                <div data-role="controlgroup" data-type="horizontal" data-position="fixed">
+                    <a id="dilSecim" data-dilno="3" href="#popupMenu" data-rel="popup" data-role="button" class="ui-btn" data-transition="slideup" style="font-size:15px;margin-right: 5px;">
+                        <img id="imgDilIcon" style="margin:1px;height:17px;width:17px" src="lib/Icon/fr.png" />
+                    </a>
+                    <input type="text" data-wrapper-class="controlgroup-textinput ui-btn" style="font-size:16px;margin-left:-10px;" id="sutunTxtAra">
+                    <button id="btnAra" data-wrapper-class="controlgroup-textinput ui-btn" style="font-size:15px;">Ara</button>
+                </div>
             </div>
-            <div data-role="controlgroup" data-type="horizontal" data-position="fixed" >
-                <a id="dilSecim" data-dilno="3" href="#popupMenu" data-rel="popup" data-role="button" class="ui-btn" data-transition="slideup" style="font-size:15px;">
-                    <img id="imgDilIcon" style="margin:1px;height:17px;width:17px" src="lib/Icon/fr.png" />
-                </a>
-                <input type="text" data-wrapper-class="controlgroup-textinput ui-btn" style="font-size:16px;margin-left:-10px;" id="sutunTxtAra" >
-                <button id="btnAra" data-wrapper-class="controlgroup-textinput ui-btn" style="font-size:15px;" >Ara</button>
-            </div>
-        </div>
-        
-        <!--<div id="kontrolgrup" data-role="controlgroup" data-type="horizontal" style="width:100%;">
-            
-            <input autocomplete="off" cdata-wrapper-class="controlgroup-textinput ui-btn"  lass="form-control input-large" id="sutunTxtAra" value="" name="AraTxt" placeholder="Ara" type="text">
-            <button>Ara</button>
-        </div>-->
         <div role="main" class="ui-content jqm-content" data-role="content">
             <div id="pnlAramaSonuc" class=" sutun sutunPnlAramaSonuc">
                 <ul data-role="listview" data-inset="true">
                     <li data-role="list-divider" data-theme="b"><h1>Toplam <span data-bind="text:Sonuclar().length+SaSonuclar().length"></span> Sonuç Bulundu</h1></li>
                     <li>
-                        <ul id="pnlAramaSonucListe" data-role="listview" class="ui-listview-outer"  data-bind="foreach: Sonuclar">
+                        <ul id="pnlAramaSonucListe" data-role="listview" class="ui-listview-outer" data-bind="foreach: Sonuclar">
                             <li data-bind="visible:AppModel.Dil==1 " data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="false">
                                 <!--<span data-bind="text:$index()+1+' .'" class="ui-li-count ui-btn-corner-all aln" style="float:left"></span>-->
                                 <h2 style="font-size:large"><img style="margin:2px;width:30px" src="lib/Icon/tr.png" /><span data-bind="html:Turkce"> </span></h2>
@@ -117,7 +111,7 @@
                     </li>
                 </ul>
             </div>
-            <!--<div id="pnlKelimeSonuc" class=" sutun sutunpnlKelimeSonuc" >
+            <!--<div id="pnlKelimeSonuc" class=" sutun sutunpnlKelimeSonuc">
                 <ul data-role="listview" data-inset="true">
                     <li data-role="list-divider" data-theme="b" data-bind="foreach: SecilenSonuclar">
                             <h1 data-bind="visible:AppModel.Dil==1">
@@ -167,15 +161,13 @@
         </div>
     </div>
     <script>
-        
-
         var dil = 3;
         AppModel.Dil = 3;
         var $pnlAramaSonuc = $("#pnlAramaSonuc"),
             $pnlKelimeSonuc = $("#pnlKelimeSonuc"),
             $sutunTxtAra = $("#sutunTxtAra"),
             $imgDilIcon = $('#imgDilIcon');
-            $btnAra = $("#btnAra");
+        $btnAra = $("#btnAra");
         $("#dilsecim li").on("click", function (event, ui) {
             var PMenu = $('#popupMenu');
             PMenu.popup("close");
@@ -222,14 +214,12 @@
             else {
                 AppModel.Sonuclar.removeAll();
                 AppModel.SaSonuclar.removeAll()
-                if (MesajDurum)
-                {
+                if (MesajDurum) {
                     AppModel.ToastMesajVer('İşlemler', 'Lütfen Bir Metin Giriniz', 'warning', 10000, true);
                 }
-                
+
             }
         };
-</script>
+    </script>
 </body>
 </html>
-
