@@ -46,11 +46,11 @@
     <None Include="Data\SozlukData.csv" />
     <None Include="Data\SozlukData.xlsx" />
     <None Include="Data\SÖZLÜK App..xls" />
+    <None Include="Psd\1024_500.psd" />
     <None Include="Psd\1024_768.psd" />
     <None Include="Psd\320_480.psd" />
     <None Include="Psd\640_960.psd" />
     <None Include="Psd\768_1024.psd" />
-    <None Include="Psd\IOS-SplashScreen-template.zip" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

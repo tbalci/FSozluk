@@ -52,14 +52,14 @@
                     <div class="ui-block-c"><img height="65px" width="64px" data-bind="attr: {src:Uygulama.Logo}" /></div>
                     <div class="ui-block-b"><h3 data-bind="text:Uygulama.Ad"></h3></div>
             </div>
-               <div data-role="popup" id="popupMenu" data-theme="d">
-                    <ul id="dilsecim" data-role="listview" data-inset="false" data-theme="d">
-                        <li data-dil="1" data-dilicon="lib/Icon/tr.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/tr.png" />Türkçe</a></li>
-                        <li data-dil="2" data-dilicon="lib/Icon/en.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/en.png" />İngilizce</a></li>
-                        <li data-dil="3" data-dilicon="lib/Icon/fr.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/fr.png" />Fransızca</a></li>
-                    </ul>
-                </div>
-                <div data-role="controlgroup" data-type="horizontal" data-position="fixed">
+            <div data-role="popup" id="popupMenu" data-theme="d" style="z-index:2">
+                <ul id="dilsecim" data-role="listview" data-inset="false" data-theme="d">
+                    <li data-dil="1" data-dilicon="lib/Icon/tr.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/tr.png" />Türkçe</a></li>
+                    <li data-dil="2" data-dilicon="lib/Icon/en.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/en.png" />İngilizce</a></li>
+                    <li data-dil="3" data-dilicon="lib/Icon/fr.png"><a href="#"><img style="margin:2px;width:23%" src="lib/Icon/fr.png" />Fransızca</a></li>
+                </ul>
+            </div>
+                <div data-role="controlgroup" data-type="horizontal" data-position="fixed" style="z-index:1">
                     <a id="dilSecim" data-dilno="3" href="#popupMenu" data-rel="popup" data-role="button" class="ui-btn" data-transition="slideup" style="font-size:15px;margin-right: 5px;">
                         <img id="imgDilIcon" style="margin:1px;height:17px;width:17px" src="lib/Icon/fr.png" />
                     </a>
